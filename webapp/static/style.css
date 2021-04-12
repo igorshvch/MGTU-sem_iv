@@ -1,0 +1,23 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0px 20px;    
+}
+
+td {
+    border: 1px solid black;
+    text-align: right;
+  }
+
+tbody tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+button {
+    margin: inherit;
+}
