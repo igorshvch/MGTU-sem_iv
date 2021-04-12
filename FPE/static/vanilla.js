@@ -9,3 +9,21 @@ function sayHi() {
 }
 
 sayHi();
+
+///////////////////////////////////////////////////////
+
+function create_content_box() {
+
+    const header_phrase = "Дабораторная работа по Основам программной инженерии № 1";
+
+    let box = document.createElement("div")
+    let header_container = document.createElement("div");
+    let task_description = document.createElement("div");
+    let control_panel = document.createElement("div");
+    let content_div = document.createElement("div");
+
+    header_container.append(phrase);
+
+
+
+}
