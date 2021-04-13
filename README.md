@@ -3,3 +3,8 @@
 *[`cheat-sheet for markdown syntax`](https://www.markdownguide.org/cheat-sheet/)*  
 *[`cheat-sheet for .gitignore`](https://git-scm.com/docs/gitignore)*
 
+## JS cheat-sheet for UI
+createElement()  
+querySelector()  
+classList  
+classLiss.toggle()  

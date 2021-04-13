@@ -3,7 +3,7 @@ import math
 #func1 :: cos
 #func2 :: sin(2*x)*(ln(x+5))**2
 
-__version__ = "0.0.2"
+__version__ = "0.0.4"
 
 func1 = math.cos
 func2 = lambda x: math.sin(2*x)*((math.log(x+5))**2)
@@ -24,3 +24,8 @@ def unpack_coord_y(coord_x, func):
         coord_y.append(y)
     return coord_y
 
+def cover_with_object(path):
+    with open(path, mode='r', encoding='utf-8') as f:
+        text = f.read()
+    text = text.replace("/n", " ")
+    return '{{"task": "{}"}}'.format(text)
