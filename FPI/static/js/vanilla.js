@@ -4,13 +4,16 @@ import {
     options_rct,
     options_trp
 } from "./options.js";
-import {getTask} from "./serverCalls.js"
+import {
+    getTask,
+    sendData
+} from "./serverCalls.js"
 
 sayHi();
 
 ///////////////////////////////////////////////////////
 
-function create_content_box() {
+function createContentBox() {
     const dummy_headers = {
         "header" : "Заголовок",
         "task" : "Описание задания",
@@ -60,7 +63,7 @@ function create_content_box() {
 }
 
 
-function make_control_panel() {
+function makeControlPanel() {
     let options = [
         {
             "type": "radio",
@@ -114,19 +117,19 @@ function make_control_panel() {
     
     document.querySelector("#rectangle").addEventListener("change", (event) => {
         console.log(event.target.value);
-        make_input_form(form, options_rct);
+        makeInputForm(form, options_rct);
     });
     document.querySelector("#trapezoid").addEventListener("change", (event) => {
         console.log(event.target.value);
-        make_input_form(form, options_trp);
+        makeInputForm(form, options_trp);
     });
     document.querySelector("#intersection").addEventListener("change", (event) => {
         console.log(event.target.value);
-        make_input_form(form, options_inter);
+        makeInputForm(form, options_inter);
     });
 }
 
-function make_input_form(elem, options) {
+function makeInputForm(elem, options) {
     let container = document.querySelector("#cur_ctrl");
     if (container) {
         container.remove();
@@ -159,9 +162,26 @@ function make_input_form(elem, options) {
             event.preventDefault();
         });
 
+        btn_mns.addEventListener("click", () => {
+            console.log(`btn_mns hadler: ${options[i].display_id}`);
+            let dsp = document.querySelector(`#${options[i].display_id}`);
+            let val = parseFloat(dsp);
+            console.log(`pls hadler: ${val.toFixed(2)}`);
+            val = val - 0.01;
+            dsp.append(val);
+        });
+        btn_pls.addEventListener("click", () => {
+            console.log(`btn_pls hadler: ${options[i].display_id}`);
+            let dsp = document.querySelector(`#${options[i].display_id}`);
+            let val = parseFloat(dsp.innerHTML);
+            console.log(`pls hadler: ${val}`);
+            val = val + 0.01;
+            dsp.innerHTML = `${val.toFixed(2)}`;
+        });
+
         display.classList.add("ctr_pan_display");
         label.classList.add("ctr_pan_label");
-        display.append("0.00");
+        display.append("0");
 
         inner_container.append(label, display, btn_mns, btn_pls);
         container.append(inner_container);
@@ -172,6 +192,12 @@ function make_input_form(elem, options) {
     evalButton.classList.add("eval_btn")
     evalButton.addEventListener("click", (event) => {
         event.preventDefault();
+        let dsp_dwn = document.querySelector("#dsp_dwn");
+        let dsp_up = document.querySelector("#dsp_up");
+        let dsp_prc = document.querySelector("#dsp_prc");
+        console.log(`dsp_dwn: ${Number.parseFloat(dsp_dwn.innerHTML)}`);
+        console.log(`dsp_up: ${Number.parseFloat(dsp_up.innerHTML)}`);
+        console.log(`dsp_prc: ${Number.parseFloat(dsp_prc.innerHTML)}`);
     });
 
     container.append(evalButton);
@@ -179,7 +205,8 @@ function make_input_form(elem, options) {
     elem.append(container);
 }
 
-create_content_box();
-make_control_panel();
+createContentBox();
+makeControlPanel();
 
 getTask();
+sendData();

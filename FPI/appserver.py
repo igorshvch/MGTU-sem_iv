@@ -1,4 +1,4 @@
-from flask import Flask, json
+from flask import Flask, json, request
 
 app = Flask(__name__, static_folder='static')
 
@@ -13,3 +13,12 @@ def return_task(filename):
         text = f.read()
     jsoned = json.loads(text)
     return json.jsonify(jsoned)
+
+@app.route('/send_data', methods=['GET', 'POST'])
+def add_message():
+    if request.method == "POST":
+        content = request.json
+        print (content["message"])
+        return {"status":"success"}
+    else:
+        return '{"status": "GET"}'
