@@ -16,7 +16,7 @@ export let options_rct = [
     {
         "label": "Введите точность",
         "label_id": "label_prc",
-        "display_id": "dsp_prc",
+        "display_id": "dsp_prc_rct",
         "btn_mns_id": "btn_mns_prc",
         "btn_pls_id": "btn_pls_prc",
     },

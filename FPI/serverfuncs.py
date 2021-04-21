@@ -29,3 +29,29 @@ def cover_with_object(path):
         text = f.read()
     text = text.replace("/n", " ")
     return '{{"task": "{}"}}'.format(text)
+
+########################
+# Метод левых прямоугольников
+########################
+def calc_precision(down, up, n_steps):
+    if down >= up:
+        return None, "Ошибка в интервале"
+    else:
+        return 1, (up-down)/n_steps
+
+def calc_integral_rct(func, down, up, n_steps):
+    down = float(down)
+    up = float(up)
+    n_steps = int(n_steps)
+    print("calc_integral_rct", down, up, n_steps)
+    h = calc_precision(down, up, n_steps)
+    if not h[0]:
+        return None, h[1]
+    result = 0
+    while down<=up:
+        try:
+            result += (h[1]*func(down))
+        except:
+            return None, "Ошибка в функции"
+        down+=h[1]
+    return 1, result
