@@ -1,55 +1,91 @@
-p {
-    all: initial;
-    display: inline-block;
-    text-align: justify;
-    border-bottom: 1px solid gray;
-}
-
 .hidden {
     display: none;
     }
 
-.box {
-    background-color: rgb(247, 245, 242);
-    border: 1px solid gray;
-    border-radius: 16px;
-    padding: 10px 10px;
+body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    background-color: rgb(240, 245, 220);
+}
+
+div {
     box-sizing: border-box;
-    box-shadow: 0px 5px 10px rgb(77, 30, 30);
-    position: relative;
-    width: 100%;
-    
+    border-radius: 7px;
+}
+
+p {
+    padding: 0px 10px;
+    display: inline-block;
     text-align: justify;
-    text-indent: 0.5cm;
 }
 
-.inner-container {
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    margin: 5px 0px;
-    padding: 10px 10px;
-    box-sizing: border-box;
-    width: 100%;
-    
+input[type="number"] {
+    all: initial;
+    background-color: rgb(95, 97, 88);
+    border: solid 2px rgb(95, 97, 88);
+    border-radius: 7px;
+    padding: 2px 5px;
+    color: white;
+    text-align: right;
+    border-radius: 7px;
+    font-size: 22px;
+    width: 8ch;
+    transition-duration: 0.4s;
+    cursor:text;
+}
+
+input:hover {
+    background-color: rgb(240, 245, 220);
+    color: black;
+    border: solid 2px rgb(95, 97, 88);
+}
+
+.box {
+    position: fixed;
+    left: 22%;
+    right: 22%;
+    height: 100%;
     overflow: auto;
+    box-sizing: border-box;
 }
 
-.task {
-    width: 100%;
-    height: 20%;
+#header p{
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
 }
 
-.ctr_pan {
-    width: 100;
-    
+.descr {
+    background-color: rgb(95, 97, 88);
+    border-radius: 7px;
+    padding: 5px 15px;
+    color: white;
 }
 
-.content {
-    width: 100%;
-    
-}
+/**********************************************/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(205, 206, 188); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(95, 97, 88); 
+  }
 
-.rb_group {
+.rb_group2 {
     margin-right: 10px;
 }
 
@@ -58,6 +94,7 @@ p {
 }
 
 .ctr_pan_display {
+    font-family: 'Jost', sans-serif;
     width: 40px;
     
     display: inline-block;
@@ -73,5 +110,90 @@ p {
 }
 
 .eval_btn {
-    margin: 10px;
+    background-color: rgb(95, 97, 88);
+    color: white;
+    border: solid 2px rgb(95, 97, 88);
+    border-radius: 7px;
+    padding: 2px 5px;
+    font-size: 22px;
+    box-sizing: border-box;
+    width: 60%;
+    margin: 20px 40px;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.eval_btn:hover {
+    background-color: rgb(240, 245, 220);
+    color: black;
+    border: solid 2px rgb(95, 97, 88);
+}
+
+.eval_btn:active {
+    background-color: rgb(138, 148, 97);
+    color: white;
+    border: solid 2px rgb(95, 97, 88);
+}
+
+.ssl_btn {
+    background-color: rgb(95, 97, 88);
+    color: white;
+    border: solid 2px rgb(95, 97, 88);
+    border-radius: 7px;
+    padding: 2px 5px;
+    font-size: 22px;
+    box-sizing: border-box;
+    width: 60%;
+    margin: 5px 40px;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.ssl_btn:hover {
+    background-color: rgb(240, 245, 220);
+    color: black;
+    border: solid 2px rgb(95, 97, 88);
+}
+
+.ssl_btn:active {
+    background-color: rgb(138, 148, 97);
+    color: white;
+    border: solid 2px rgb(95, 97, 88);
+}
+
+.elem_tbl {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.coords_tbl {
+    background-color: rgb(95, 97, 88);
+    border-radius: 7px;
+    color: white;
+    box-sizing: border-box;
+    margin: 0px 0px 50px 40px;
+}
+
+#content {
+    min-height: 200px;
+}
+
+#cur_ctrl {
+    padding: 5px 40px;
+}
+
+#rb_form1 {
+    margin: 0px 5px 20px 5px;
+    padding: 5px 10px;
+    border: solid 2px rgb(95, 97, 88);
+    border-radius: 7px;
+    overflow: auto;
+}
+
+#my_chart {
+    width: 400px;
+    height: 400px;
 }
