@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block myscript %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="module" src="../static/js/lab02/vanilla.js"></script>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="header">
+        <h1>
+            Лабораторная работа № 2: случайные процессы, исследование случайных величин
+        </h1>
+    </div>
+    <div class="meta_info">
+        <div>
+            Преподаватель <span>Рудаков И.В.</span>
+        </div>
+        <div>
+            Выполнил студент <span>Шевченио И.С.</span>
+        </div>
+        <div>
+            Группа ИУ7-68Б(В)
+        </div>
+        <div>
+            2021 год
+        </div>
+    </div>
+    <div class="content">
+        <div class="task">
+            <div class="task_info">
+                <p>Описание задания</p>
+            </div>
+            <div class="task_descr">
+                <p>Построить функции:</p>
+                    <ul>
+                        <li>Распределения вероятости</li>
+                        <li>Плотности вероятности</li>
+                    </ul>
+                <p>
+                    Эти функции построить для:
+                </p>
+                <ul>
+                    <li>Равномерного распределения</li>
+                    <li>Нормального распределения</li>
+                    <li>Распределения Пуассона (дополнительно)</li>
+                </ul>
+                <p>
+                    Для каждой функции реализовать возможность изменения параметров, отрисовку графиков.
+                </p>
+            </div>
+        </div>
+        <div class="result">
+            <div class="result_info">
+                <p>Результат выполнения</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href={{ url_for('index') }}>На главную</a>
+    </div>
+</div>
+{% endblock %}

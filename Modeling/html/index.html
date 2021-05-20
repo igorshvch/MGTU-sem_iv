@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="header">
+        <h1>
+            Лабораторные работы по моделированию
+        </h1>
+    </div>
+    <div class="meta_info">
+        <div>
+            Преподаватель <span>Рудаков И.В.</span>
+        </div>
+        <div>
+            Выполнил студент <span>Шевченио И.С.</span>
+        </div>
+        <div>
+            Группа ИУ7-68Б(В)
+        </div>
+        <div>
+            2021 год
+        </div>
+    </div>
+    <div class="index">
+        <ol>
+            <li><a href={{ url_for('lab_renderer', lab_id="01") }}>Лабораторная работа № 1: исследование последовательности псевдослучайных чисел</a></li>
+            <li><a href={{ url_for('lab_renderer', lab_id="02") }}>Лабораторная работа № 2: случайные процессы, исследование случайных величин</a></li>
+            <li><a href={{ url_for('lab_renderer', lab_id="03") }}>Лабораторная работа № 3: предельные вероятности состояний, уравнения Колмогорова</a></li>
+            <li><a href={{ url_for('lab_renderer', lab_id="04") }}>Лабораторная работа № 4: программная имитация i-ого прибора</a></li>
+            <li><a href={{ url_for('lab_renderer', lab_id="05") }}>Лабораторная работа № 5: многоканальная система массового обслуживания</a></li>
+        </ol>
+    </div>
+    <div class="footer">
+    </div>
+</div>
+{% endblock %}

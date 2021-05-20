@@ -1,0 +1,1 @@
+console.log("THIS IS VANILLA FOR LAB 05");

@@ -1,0 +1,268 @@
+body {
+    background-color:rgb(206, 205, 205);
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 1cm;
+    padding: 0px 10px;
+}
+
+div {
+    padding: 0px 10px;  
+}
+
+input[type="number"] {
+    float: right;
+    text-align: right;
+    cursor: text;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+.container {
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color:whitesmoke;
+    border: 2px solid rgb(105, 105, 105);
+    overflow-y: scroll;
+}
+
+.task_info, .result_info {
+    background-color: #4caf50;
+    color: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0%;
+    height: 140px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    z-index: 1000;
+}
+
+.meta_info {
+    margin-top: 180px;
+}
+
+.content {
+    margin-bottom: 100px;
+}
+
+.result {
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.form_inner_container {
+    width: 800px;
+}
+
+.displ {
+    display: inline-block;
+    background-color: rgb(99, 99, 99);
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+select {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 2px 5px;
+    margin-left: 10px;
+}
+
+#range_input {
+    margin: 0px 20px;
+}
+
+.control_area {
+    border-top: 2px solid rgb(105, 105, 105);
+    border-bottom: 2px solid rgb(105, 105, 105);
+    margin: 20px 0px;
+    padding: 5px 0px;
+}
+
+.state_table_container, .res_table_container {
+    min-height: 440px;
+}
+
+.chart_box {
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+}
+/*
+#my_chart {
+    width: 400px;
+    height: 400px;
+}
+*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    z-index: 1000;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/*********************************************/
+
+.ctr_pan_box {
+    display: block;
+}
+
+#res_tbl {
+    margin-top: 10px;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.hoverable {
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.hoverable:hover {
+    background-color: rgb(153, 153, 153);
+    color: white;
+}
+
+th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0px 20px;
+    height: 5ch;   
+}
+
+td {
+    border: 1px solid black;
+    text-align: right;
+    width: 5ch;
+    height: 5ch;
+}
+
+.tbl_input {
+    all: initial;
+    text-align: right;
+    width: 100%;
+    cursor: text;
+    height: 5ch;
+    font-size: 22px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    transition-duration: 0.4s;
+}
+
+.tbl_input:hover {
+    color: white;
+}
+
+/*
+tbody tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+*/
+
+thead, thead th, tfoot, tfoot th, tfoot td {
+    background-color: rgb(99, 99, 99);
+    color: white;
+    font-weight: bold;
+    border: black;
+}
+
+tbody tr th {
+    width: 2ch;
+}
+
+thead, tfoot {
+    font-size: 16px;
+}
+
+#eval_button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.result #eval_button {
+    margin: 20px 0px
+}
+
+#eval_button:hover {
+    background-color: rgb(153, 153, 153);
+    color: white;
+}
+
+#eval_button:active {
+    background-color: rgb(138, 148, 97);
+    color: white;
+}
+
+#resTable td {
+    padding-right: 10px;
+}
+
+/**********************************************/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+*/
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(201, 201, 201); 
+    /*border-radius: 10px;*/
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(99, 99, 99); 
+}
