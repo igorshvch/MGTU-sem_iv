@@ -160,3 +160,12 @@ def eval_data_lab04():
         "ev_m": ev_m,
         "dt_m": dt_m
     }
+
+@app.route('/lab05/eval_data', methods=["POST"])
+def eval_data_lab05():
+    content = request.json
+    for key, val in content.items():
+        content[key] = int(val)
+    print(content)
+    res = srf.lab05_main(content)
+    return res

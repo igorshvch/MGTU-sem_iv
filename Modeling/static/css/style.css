@@ -52,7 +52,7 @@ input[type="number"] {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px 5px;
     z-index: 1000;
 }
 
@@ -70,7 +70,7 @@ input[type="number"] {
 }
 
 .form_inner_container {
-    width: 800px;
+    width: 900px;
 }
 
 .displ {
